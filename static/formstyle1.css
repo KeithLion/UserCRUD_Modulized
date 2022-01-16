@@ -1,0 +1,12 @@
+body {
+  margin: 0 auto;
+}
+.container {
+  margin-top: 50px;
+  max-width: 500px;
+}
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
