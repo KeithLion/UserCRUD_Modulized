@@ -22,7 +22,7 @@ def new_user():
     return redirect('/')
 
 
-@app.route('/allusers')
+@app.route('/add_user')
 def create_user():
     return render_template('add_user.html', users=User.get_all())
 
