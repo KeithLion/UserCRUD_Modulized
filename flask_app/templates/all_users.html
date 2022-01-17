@@ -34,7 +34,15 @@
           <td>{{new_user.first_name}}</td>
           <td>{{new_user.last_name}}</td>
           <td>{{new_user.email}}</td>
+          <td>
+            <a href="/users/{{new_user.id}}">Show</a>
+            <a href="/users/{{new_user.id}}/update_page">Edit</a>
+            <form action="/users/{{ new_user.id }}/delete" method="POST">
+              <input type="submit" value="Delete" />
+            </form>
+          </td>
         </tr>
+
         {% endfor %}
       </tbody>
     </table>
