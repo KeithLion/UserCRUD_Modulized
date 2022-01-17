@@ -39,5 +39,5 @@ class User:
 
     @classmethod
     def delete(cls, data):
-        query = ' update users set first_name = %(fname)s, last_name = %(lname)s, email = %(ema)s where id = %(id)s;'
+        query = "DELETE FROM users WHERE id = %(id)s;"
         return connectToMySQL(cls.db).query_db(query, data)
