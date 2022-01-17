@@ -5,7 +5,7 @@ from flask_app.models.user import User
 
 @app.route('/')
 def create_user():
-    return render_template('form1.html')
+    return render_template('add_user.html')
 
 
 @app.route('/create_users', methods=['get', 'post'])
@@ -24,7 +24,7 @@ def new_user():
 
 @app.route('/allusers')
 def all():
-    return render_template('form2.html', users=User.get_all())
+    return render_template('all_users.html', users=User.get_all())
 
 
 @app.route('/users/<int:id>')
